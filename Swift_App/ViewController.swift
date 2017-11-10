@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func buttonpresses(sender: AnyObject) {
-        self.label.text = "This is Button"
+        self.label.text = "This is a  Button"
         print(" Button Pressed %d times", count);
         
         if (count==5)
