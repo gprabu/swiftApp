@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,57 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bA5-fD-yyC">
+                                <rect key="frame" x="270" y="120" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="abd-v3-tFg"/>
+                                </constraints>
+                                <state key="normal" title="Push Me"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="abd-v3-tFg"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="buttonpresses:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eg7-Jt-nji"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World !!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cs-VP-qQH">
+                                <rect key="frame" x="246" y="50" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bA5-fD-yyC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="IZv-LQ-6TW"/>
+                            <constraint firstItem="bA5-fD-yyC" firstAttribute="centerX" secondItem="2cs-VP-qQH" secondAttribute="centerX" id="ND0-Cu-lzl"/>
+                            <constraint firstItem="bA5-fD-yyC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="TSK-m6-84c"/>
+                            <constraint firstItem="bA5-fD-yyC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="cmq-J3-z2Q"/>
+                            <constraint firstItem="bA5-fD-yyC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="53" id="hx5-0z-IO3"/>
+                            <constraint firstItem="bA5-fD-yyC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="250" id="jIP-Aq-kTJ"/>
+                            <constraint firstItem="2cs-VP-qQH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="50" id="nAl-Et-CtL"/>
+                            <constraint firstItem="2cs-VP-qQH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="okh-x6-GRo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IZv-LQ-6TW"/>
+                                <exclude reference="TSK-m6-84c"/>
+                                <exclude reference="hx5-0z-IO3"/>
+                                <exclude reference="jIP-Aq-kTJ"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="bA5-fD-yyC" id="0IE-kO-1aE"/>
+                        <outlet property="label" destination="2cs-VP-qQH" id="3eU-6C-MqL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-369" y="-229"/>
         </scene>
     </scenes>
 </document>
